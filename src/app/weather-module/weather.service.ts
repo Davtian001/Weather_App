@@ -61,7 +61,7 @@ export class WeatherService {
       map(weathetData => {
         // console.log("TCL: weathetData", weathetData)
 
-        const weatherDataPieces: object[][] = [];
+        let weatherDataPieces: object[][] = [];
         let equalDate = new Date(weathetData.list[0].dt_txt).getDate();
         let pushIndex = 0;
 
@@ -86,7 +86,7 @@ export class WeatherService {
           }
         });
         weathetData.list = weatherDataPieces;
-        // weatherDataPieces = []; // clean memory
+        weatherDataPieces = null; // clean memory
 
         const midifedData = this.getMaxandMinTempDay(weathetData);
         this.weatherArray$.next(midifedData);
