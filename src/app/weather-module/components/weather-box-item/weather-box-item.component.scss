@@ -1,0 +1,74 @@
+.weather-card {  
+    outline: unset;   
+    width: 100%;
+    min-width: 180px;
+    padding: 1% 7%;
+    transition: 0.4s;
+    cursor: pointer;
+    border: 1px solid lightgray;
+    box-shadow: 15px 20px 12px -5px darkgrey;
+    border-radius: 16px;
+    &:hover {
+        background: #e5e1ee;
+        margin-left: 1%;
+        transform: rotate(0.5deg)
+    }
+}
+.wt-icon { width: 100px}
+
+.active-item {
+    background: #ded5f1;
+    margin-left: 1%;
+    transform: rotate(1deg)
+}
+
+.humidity {    
+    color: currentColor;
+    /* float: left; */
+    font-size: 108%;}
+
+.tmp-interval {
+    width: 19%;
+    color: slategrey;
+    float: right;
+    margin: 2%;
+}
+
+.tmp-scale {
+        transition: 0.2;
+        color: black;
+        position: absolute;
+        font-size: 186%;
+        font-family: cursive;
+    }
+
+.city-name { 
+    color: darkslategray;
+    font-size: 117%;
+    margin: 11% 4%;
+    display: inline-block;
+    font-family: cursive;
+    font-size: 130%;
+}  
+.time {
+    font-size: 95%;
+    color: steelblue;
+    position: absolute;
+    top: 5%;
+    left: 54%;
+    }
+
+.col-vis { 
+    padding: 1% 2% 11%;
+    .temp-clouds {
+        margin: 4% 1% 0;
+        display: inline-block;
+        font-family: monospace;
+
+    }
+    .sea-level  {
+        margin: 4% 1% 0;
+        display: inline-block; 
+        font-family: monospace;    
+    }
+}

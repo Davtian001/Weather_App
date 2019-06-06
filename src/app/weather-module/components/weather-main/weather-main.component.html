@@ -1,0 +1,25 @@
+
+<router-outlet></router-outlet>
+
+<section class="main">
+    <div class="main-weather-list" *ngIf="weatherData">
+        <div *ngFor="let weatherListItem of weatherData.list; index as ind" class="weather-list-item"
+             [routerLink]="['/','weather','details',ind]" 
+             (click)="selectItem(ind)">
+
+                <app-weather-box-item 
+                    [activeItem]="ind === activeItem" 
+                    [weatherData]="weatherListItem" 
+                    [city]="weatherData.city"
+                    [maxMinTemp]="weatherData.dayMaxAndMinTemp"
+                    [maxMinHum]="weatherData.dayMaxAndMinHum">
+                </app-weather-box-item>
+        </div>
+    </div>
+</section>
+
+<app-graphic></app-graphic>
+
+<!-- https://alligator.io/angular/chartjs-ng2-charts/ -->
+<!-- https://www.chartjs.org/docs/latest/configuration/animations.html -->
+<!-- https://github.com/martinrzg/weather-app -->

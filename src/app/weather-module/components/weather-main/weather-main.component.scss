@@ -1,0 +1,17 @@
+.main {
+    // background-image: url('../../../../assets/6.jpg');
+    .main-weather-list {
+       margin: 0 auto;
+       width: 93%;
+
+    .weather-list-item {
+        outline: unset;
+        display: inline-table;
+        width: 16%;
+        padding: 24px;
+        margin: 27px 0px;
+        max-width: 260px;
+    }
+
+    } 
+}

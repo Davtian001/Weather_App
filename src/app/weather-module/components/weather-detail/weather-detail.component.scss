@@ -1,0 +1,539 @@
+
+mat-form-field {
+    width: 120px;
+    margin: 22px 136px;
+    position: absolute;
+ }
+.optional {
+    position: absolute;
+    top: 115px;
+    left: 321px;
+    font-family: cursive;
+    font-size: 94%;
+}
+.city-country-name {
+    color: azure;
+    margin: 2% 3%;
+    display: inline-block;
+    font-family: monospace;
+    font-size: 294%;
+    display: initial;
+    padding: 1%;
+}
+.date { 
+    color: aliceblue;
+    font-size: 162%;
+}
+.top-hr {
+    width: 499px;
+    margin: 8px 31px;
+    padding: 1px;
+    background: white;
+}
+.temperature {    
+    position: absolute;
+    top: 113px;
+    left: 189px;
+    font-family: monospace;
+    font-size: 300%;
+}
+.disc {
+    display: initial;
+    border-radius: 65%;
+    margin: 23px 0px 10px 66px;
+    background: powderblue;
+}
+.background {
+    min-width: 570px;
+    margin: 1.5% 1%;
+    height: 306px;
+    border-radius: 36px;
+	background-image: url('../../../../assets/1.png');
+	// background-image: url('../../../../assets/6.jpg');
+}
+.hh {
+    color: aliceblue;
+    margin: -2% 20%;
+    display: grid;
+    font-family: monospace;
+    font-size: 138%;
+}
+.wt-icon { width: 100px}
+.back { 
+    margin: 35px 29px;
+    display: inherit;
+}
+
+// @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// // use only the available space inside the 400x400 frame
+// .frame {
+//   position: absolute;
+// 	top: 21.5%;
+// 	right: 6%;
+//   width: 400px;
+//   height: 400px;
+//   margin-top: -200px;
+//   margin-left: -200px;
+//   border-radius: 2px;
+// 	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+// 	overflow: hidden;
+//   background: #fff;
+//   color: #333;
+// 	font-family: 'Open Sans', Helvetica, sans-serif;
+// 	-webkit-font-smoothing: antialiased;
+// 	-moz-osx-font-smoothing: grayscale;
+// }
+
+// .center {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%,-50%);
+// }
+
+// .weather-view{
+// 	width:400px;
+// 	height:400px;
+// 	background:rgb(24, 34, 63);
+// }
+
+// .moon{
+// 	position:absolute;
+// 	top:20px;
+// 	left:10px;
+// 	width:70px;
+// 	height:70px;
+// 	background:rgb(233, 234, 220);
+// 	box-shadow: 0px 0px 9px 2px #888888;
+// 	border-radius:50%;
+// }
+
+// .crater{
+// 	background:rgb(210, 211, 198);
+// 	border-radius:50%;
+// 	position:absolute;
+// }
+
+// .crater1{
+// 	width:15px;
+// 	height:15px;
+// 	top:15px;
+// 	left:40px;
+// }
+
+// .crater2{
+// 	width:5px;
+// 	height:5px;
+// 	top:30px;
+// 	left:20px;
+// }
+
+// .crater3{
+// 	width:7px;
+// 	height:7px;
+// 	top:40px;
+// 	left:3px;
+// }
+
+// .crater4{
+// 	width:10px;
+// 	height:10px;
+// 	top:40px;
+// 	left:20px;
+// }
+
+// .crater5{
+// 	width:12px;
+// 	height:12px;
+// 	top:50px;
+// 	left:45px;
+// }
+
+// .crater6{
+// 	width:5px;
+// 	height:5px;
+// 	top:10px;
+// 	left:10px;
+// }
+
+// .crater7{
+// 	width:6px;
+// 	height:6px;
+// 	top:10px;
+// 	left:14px;
+// }
+
+// .crater8{
+// 	width:5px;
+// 	height:5px;
+// 	top:10px;
+// 	left:50px;
+// }
+
+// .rain{
+// 	background:rgb(85, 131, 204);
+// 	width:8px;
+// 	height:8px;
+// 	position:absolute;
+// 	z-index:15;
+// 	border-radius:50%;
+// 	bottom:100px;
+// }
+
+// .drop-big-1{
+// 	left:20px;
+// 	animation: raining 1s linear 0.1s infinite;
+// }
+
+// .drop-big-1::before{
+// 	position:absolute;
+// 	content:'';
+// 	top:-2px;
+// 	left:1px;
+// 	width:6px;
+// 	height:6px;
+// 	border-radius:6px;
+// 	background:inherit;
+// }
+
+// .drop-big-1::after{
+// 	position:absolute;
+// 	content:'';
+// 	top:-5px;
+// 	left:2px;
+// 	width:4px;
+// 	height:10px;
+// 	border-radius:50%;
+// 	background:inherit;
+// }
+
+// .drop-big-2{
+// 	left:60px;
+// 	animation: raining 1s linear 0.2s infinite;
+// }
+
+// .drop-big-2::before{
+// 	position:absolute;
+// 	content:'';
+// 	top:-2px;
+// 	left:1px;
+// 	width:6px;
+// 	height:6px;
+// 	border-radius:6px;
+// 	background:inherit;
+// }
+
+// .drop-big-2::after{
+// 	position:absolute;
+// 	content:'';
+// 	top:-5px;
+// 	left:2px;
+// 	width:4px;
+// 	height:10px;
+// 	border-radius:50%;
+// 	background:inherit;
+// }
+
+// .drop-big-3{
+// 	left:100px;
+// 	animation: raining 0.7s linear 0.3s infinite;
+// }
+
+// .drop-big-3::before{
+// 	position:absolute;
+// 	content:'';
+// 	top:-2px;
+// 	left:1px;
+// 	width:6px;
+// 	height:6px;
+// 	border-radius:6px;
+// 	background:inherit;
+// }
+
+// .drop-big-3::after{
+// 	position:absolute;
+// 	content:'';
+// 	top:-5px;
+// 	left:2px;
+// 	width:4px;
+// 	height:10px;
+// 	border-radius:50%;
+// 	background:inherit;
+// }
+
+// .drop-big-4{
+// 	left:140px;
+// 	animation: raining 0.7s linear 0.4s infinite;
+// }
+
+// .drop-big-4::before{
+// 	position:absolute;
+// 	content:'';
+// 	top:-2px;
+// 	left:1px;
+// 	width:6px;
+// 	height:6px;
+// 	border-radius:6px;
+// 	background:inherit;
+// }
+
+// .drop-big-4::after{
+// 	position:absolute;
+// 	content:'';
+// 	top:-5px;
+// 	left:2px;
+// 	width:4px;
+// 	height:10px;
+// 	border-radius:50%;
+// 	background:inherit;
+// }
+
+// .drop-big-5{
+// 	left:180px;
+// 	animation: raining 0.7s linear 0.5s infinite;
+// }
+
+// .drop-big-5::before{
+// 	position:absolute;
+// 	content:'';
+// 	top:-2px;
+// 	left:1px;
+// 	width:6px;
+// 	height:6px;
+// 	border-radius:6px;
+// 	background:inherit;
+// }
+
+// .drop-big-5::after{
+// 	position:absolute;
+// 	content:'';
+// 	top:-5px;
+// 	left:2px;
+// 	width:4px;
+// 	height:10px;
+// 	border-radius:50%;
+// 	background:inherit;
+// }
+
+// .drop-big-6{
+// 	left:220px;
+// 	animation: raining 0.7s linear 0.6s infinite;
+// }
+
+// .drop-big-6::before{
+// 	position:absolute;
+// 	content:'';
+// 	top:-2px;
+// 	left:1px;
+// 	width:6px;
+// 	height:6px;
+// 	border-radius:6px;
+// 	background:inherit;
+// }
+
+// .drop-big-6::after{
+// 	position:absolute;
+// 	content:'';
+// 	top:-5px;
+// 	left:2px;
+// 	width:4px;
+// 	height:10px;
+// 	border-radius:50%;
+// 	background:inherit;
+// }
+
+// .drop-big-7{
+// 	left:260px;
+// 	animation: raining 0.7s linear 0.7s infinite;
+// }
+
+// .drop-big-7::before{
+// 	position:absolute;
+// 	content:'';
+// 	top:-2px;
+// 	left:1px;
+// 	width:6px;
+// 	height:6px;
+// 	border-radius:6px;
+// 	background:inherit;
+// }
+
+// .drop-big-7::after{
+// 	position:absolute;
+// 	content:'';
+// 	top:-5px;
+// 	left:2px;
+// 	width:4px;
+// 	height:10px;
+// 	border-radius:50%;
+// 	background:inherit;
+// }
+
+// .drop-big-8{
+// 	left:300px;
+// 	animation: raining 0.7s linear 0.8s infinite;
+// }
+
+// .drop-big-8::before{
+// 	position:absolute;
+// 	content:'';
+// 	top:-2px;
+// 	left:1px;
+// 	width:6px;
+// 	height:6px;
+// 	border-radius:6px;
+// 	background:inherit;
+// }
+
+// .drop-big-8::after{
+// 	position:absolute;
+// 	content:'';
+// 	top:-5px;
+// 	left:2px;
+// 	width:4px;
+// 	height:10px;
+// 	border-radius:50%;
+// 	background:inherit;
+// }
+
+// .drop-big-9{
+// 	left:340px;
+// 	animation: raining 0.7s linear 0.9s infinite;
+// }
+
+// .drop-big-9::before{
+// 	position:absolute;
+// 	content:'';
+// 	top:-2px;
+// 	left:1px;
+// 	width:6px;
+// 	height:6px;
+// 	border-radius:6px;
+// 	background:inherit;
+// }
+
+// .drop-big-9::after{
+// 	position:absolute;
+// 	content:'';
+// 	top:-5px;
+// 	left:2px;
+// 	width:4px;
+// 	height:10px;
+// 	border-radius:50%;
+// 	background:inherit;
+// }
+
+// .drop-big-10{
+// 	left:380px;
+// 	animation: raining 0.7s linear 1s infinite;
+// }
+
+// .drop-big-10::before{
+// 	position:absolute;
+// 	content:'';
+// 	top:-2px;
+// 	left:1px;
+// 	width:6px;
+// 	height:6px;
+// 	border-radius:6px;
+// 	background:inherit;
+// }
+
+// .drop-big-10::after{
+// 	position:absolute;
+// 	content:'';
+// 	top:-5px;
+// 	left:2px;
+// 	width:4px;
+// 	height:10px;
+// 	border-radius:50%;
+// 	background:inherit;
+// }
+
+// .hill{
+// 	background:rgb(28, 61, 114);
+// 	width:330px;
+// 	height:280px;
+// 	border-radius:50%;
+// 	position:absolute;
+// 	z-index:2;
+// }
+
+// .hill1, .hill2, .hill3{
+// 	top:200px;
+// 	background:rgb(48, 60, 93);
+// }
+
+// .hill4, .hill5{
+// 	background:rgb(38, 49, 79);
+// }
+
+// .hill1{
+// 	left:-170px;
+// 	top:220px;
+// }
+
+// .hill2{
+// 	left:70px;
+// 	top:220px;
+// }
+
+// .hill3{
+// 	right:-250px;
+// }
+
+// .hill4{
+// 	top:200px;
+// 	left:-60px;
+// 	z-index:1;
+// }
+
+// .hill5{
+// 	top:180px;
+// 	z-index:1;
+// 	right:-80px;
+// }
+
+// .weather-info{
+// 	display:flex;
+// 	align-items:center;
+// 	justify-content:flex-start;
+// 	flex-direction:row;
+// 	position:absolute;
+// 	background:white;
+// 	z-index:10;
+// 	width:400px;
+// 	height:100px;
+// 	bottom:0px;
+// }
+
+// .info{
+// 	padding:5px;
+// }
+
+// .degrees{
+// 	font-size:3rem;
+// }
+
+// .windHum{
+// 	display:flex;
+// 	flex-direction:column;
+// 	padding:10px;
+// }
+
+// .comingUp{
+// 	  display: flex;
+//     flex-direction: column;
+//     padding: 10px;
+//     margin-left: 30px;
+//     justify-content: right;
+//     text-align: right;
+// }
+
+// @keyframes raining {
+// 	0% {transform:translate(40px, -200px) scaleX(1) scaleY(1) rotate(20deg);
+// 	}
+// 	90%{transform:translate(0,0) scaleX(1) scaleY(1) rotate(20deg); //this is what creates the effect of rain hitting the ground as the shape is rotated before it can 'pass through' the container i.e. the animation starts over. If you change this to 100%, the effect is clear.
+// 	}
+// }

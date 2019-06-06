@@ -1,0 +1,29 @@
+<mat-card class="weather-card"  [class.active-item]="activeItem">
+
+  <mat-card-header>
+    <div mat-card-avatar class="tmp-city">
+      <span class="city-name">{{city.name}} </span>
+    </div>
+    <span class="time">{{ weatherDayItem[selectedIndex].dt * 1000 | date:'EEEE' }}</span>
+  </mat-card-header>
+
+  <div class="img-and-scale">
+    <img class="wt-icon" [src]="weatherDayItem[selectedIndex]?.weather[0].icon">
+    <span class="tmp-scale">{{weatherDayItem[selectedIndex].main.temp | scale:'celcius'}}</span>
+  </div>
+
+  <mat-card-content>
+    <span class="humidity"> Humidity {{weatherDayItem[selectedIndex].main.humidity }}%</span>
+    <hr>
+    <div class="tmp-interval">
+      <span class="temp-max"> {{maxAndMinTemps[selectedIndex].dayMax | scale:'celcius'}}</span>
+      <hr>
+      <span class="temp-min"> {{maxAndMinTemps[selectedIndex].dayMin | scale:'celcius'}}</span>
+    </div>
+    <div class="col-vis">
+      <span class="temp-clouds"> Clouds: {{weatherDayItem[selectedIndex].clouds.all }}%</span> <br>
+      <span class="sea-level">Sea Levev: {{weatherDayItem[selectedIndex].main.sea_level | convert:'m-to-km' }}</span>
+    </div>
+
+  </mat-card-content>
+</mat-card>

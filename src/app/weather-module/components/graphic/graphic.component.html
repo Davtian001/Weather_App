@@ -1,0 +1,15 @@
+<ng-container *ngIf="this.chartData.length >= 2">
+    
+    <div class="main-graphic">
+            <canvas
+            baseChart
+            [chartType]="'line'"
+            [datasets]="chartData"
+            [labels]="chartLabels"
+            [options]="chartOptions"
+            [legend]="true"
+            (chartClick)="onChartClick($event)">
+        </canvas>
+    </div>
+
+</ng-container>

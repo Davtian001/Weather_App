@@ -1,0 +1,69 @@
+<ng-template #weatherDetails 
+  let-SelectedIndexDayWeather="_selectedIndexDayWeather"
+  let-SelectedDayWeather="_selectedDayWeather">
+
+
+  <div class="background">
+    <div>
+      <br>
+      <h1 class="city-country-name">{{SelectedDayWeather.city.name}},{{SelectedDayWeather.city.country}}</h1>
+      <span class="date">{{ SelectedIndexDayWeather.dt * 1000 | date: 'fullDate'}}</span><br>
+      <hr class="top-hr">
+    </div>
+
+    <div class="disc">
+      <img class="wt-icon" [src]="SelectedIndexDayWeather.weather[0].icon">
+    </div>
+
+    <div class="optional">
+      <span class="sea-level">
+        Sea Levev: {{SelectedIndexDayWeather.main.sea_level | convert:'m-to-km' }}
+      </span>
+      <hr>
+      <span class="pressure">Pressure: {{SelectedIndexDayWeather.main.pressure }}p</span>
+      <hr>
+
+      <span class="temp-max">
+        T&nbsp; 
+        Max: {{SelectedIndexDayWeather.main.temp_max | scale:'celcius'}},&nbsp; 
+        Min: {{SelectedIndexDayWeather.main.temp_min| scale:'celcius'}} </span>
+      <hr>
+      <span class="temp-min">
+        H&nbsp; Hum: 
+        Max: {{SelectedDayWeather.dayMaxAndMinHum[currentDayNum].dayMax }}%,&nbsp;
+        Min: {{SelectedDayWeather.dayMaxAndMinHum[currentDayNum].dayMin }}% 
+      </span>
+
+      <hr>
+    </div>
+    <span class="temperature">{{ SelectedIndexDayWeather.main.temp | scale:'celcius'}}</span>
+
+    <div class="form-fields">
+      <mat-form-field>
+        <mat-label>Select Time</mat-label>
+        <mat-select name="food">
+
+          <mat-option *ngFor="let times of SelectedDayWeather.list; index as ind"
+            [value]="SelectedDayWeather.list[selectedIndex]" (click)="select(ind)">
+            {{ (times.dt *1000) | date:"EEEE:h:mm" }}
+          </mat-option>
+
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <button mat-raised-button color="primary" class="back"
+      [routerLink]="['../../', {selectedItem: false}]">Back</button>
+    <span class="hh">At- {{SelectedIndexDayWeather.dt * 1000 | date: 'hh'}}</span>
+  </div>
+
+</ng-template>
+
+
+
+<!-- Currrent Context -->
+<ng-container *ngTemplateOutlet="weatherDetails; context: {
+          _selectedIndexDayWeather: selectedDayWeather.list[selectedIndex],
+          _selectedDayWeather: selectedDayWeather
+        }">
+</ng-container>
