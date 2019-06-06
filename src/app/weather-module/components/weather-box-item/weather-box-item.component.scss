@@ -14,8 +14,15 @@
         transform: rotate(0.5deg)
     }
 }
-.wt-icon { width: 100px}
 
+mat-card-header {
+    margin-top: 0;
+    background: aliceblue;
+    border-radius: 8px;
+    margin: 2.5px -8px 0 !important;
+}
+
+.wt-icon { width: 100px}
 .active-item {
     background: #ded5f1;
     margin-left: 1%;
@@ -24,7 +31,6 @@
 
 .humidity {    
     color: currentColor;
-    /* float: left; */
     font-size: 108%;}
 
 .tmp-interval {
@@ -45,7 +51,8 @@
 .city-name { 
     color: darkslategray;
     font-size: 117%;
-    margin: 11% 4%;
+    // margin: 11% 4%;
+    margin: 11% 19%;
     display: inline-block;
     font-family: cursive;
     font-size: 130%;
