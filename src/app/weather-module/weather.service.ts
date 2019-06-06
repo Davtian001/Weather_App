@@ -55,29 +55,42 @@ export class WeatherService {
   toDivideWithDays<T>(piecesCount: number = 3): Observable<any> {
     piecesCount = 24 / piecesCount;
 
+    let pushIndex = 0;
+
     return this.getWeather().pipe(
       map(weathetData => {
         // console.log("TCL: weathetData", weathetData)
 
-        let weatherDataPieces: object[] = [];
-        let dayIntervalDinamicArray: object[] = [];
+        const weatherDataPieces: object[][] = [];
+        let equalDate = new Date(weathetData.list[0].dt_txt).getDate();
+        let pushIndex = 0;
 
-        weathetData.list.forEach(item => {
+        weathetData.list.forEach((item,ind) => {
 
-          if (dayIntervalDinamicArray.length < piecesCount - 1) {
-            dayIntervalDinamicArray.push(item);
+          if (equalDate === (new Date(item.dt_txt).getDate())) {
+
+            if (weatherDataPieces[pushIndex]) {
+              weatherDataPieces[pushIndex].push(item);
+
+            } else {
+              weatherDataPieces[pushIndex] = [];
+              weatherDataPieces[pushIndex].push(item);
+            }
 
           } else {
-            dayIntervalDinamicArray.push(item); // vor ckorcnenq element@
-            weatherDataPieces.push(dayIntervalDinamicArray);
-            dayIntervalDinamicArray = [];
+            if(ind !== 0) pushIndex++;
+            weatherDataPieces[pushIndex] = [];
+            weatherDataPieces[pushIndex].push(item);
+
+            equalDate = new Date(item.dt_txt).getDate();
           }
         });
         weathetData.list = weatherDataPieces;
-        weatherDataPieces = []; // clean memory
-        
+        // weatherDataPieces = []; // clean memory
+
         const midifedData = this.getMaxandMinTempDay(weathetData);
-        this.weatherArray$.next(weathetData);
+        this.weatherArray$.next(midifedData);
+        console.log("TCL: weathetData", weathetData,midifedData)
         return midifedData;
       })
     );
@@ -108,8 +121,8 @@ export class WeatherService {
 
         if (dayMinTemp > dataItem.main.temp) { dayMinTemp = dataItem.main.temp; }
 
-        if(dataItem.main.humidity > dayMaxHumidity) { dayMaxHumidity = dataItem.main.humidity; }
-        if(dayMinHumidity > dataItem.main.humidity) { dayMinHumidity = dataItem.main.humidity; }
+        if (dataItem.main.humidity > dayMaxHumidity) { dayMaxHumidity = dataItem.main.humidity; }
+        if (dayMinHumidity > dataItem.main.humidity) { dayMinHumidity = dataItem.main.humidity; }
       });
 
       weathetData.dayMaxAndMinTemp.push({ dayMax: dayMaxTemp, dayMin: dayMinTemp });

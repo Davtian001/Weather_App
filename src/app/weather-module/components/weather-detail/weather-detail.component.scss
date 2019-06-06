@@ -9,8 +9,13 @@ mat-form-field {
     top: 115px;
     left: 321px;
     font-family: cursive;
+    color: rgb(35, 47, 85);
     font-size: 94%;
+    .dinamic-info {
+        color: rgb(163, 17, 17)
+    }
 }
+
 .city-country-name {
     color: azure;
     margin: 2% 3%;

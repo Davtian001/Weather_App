@@ -1,7 +1,10 @@
 .weather-card {  
     outline: unset;   
     width: 100%;
-    min-width: 180px;
+
+    min-width: 150px;
+    // max-width: 200px;
+
     padding: 1% 7%;
     transition: 0.4s;
     cursor: pointer;

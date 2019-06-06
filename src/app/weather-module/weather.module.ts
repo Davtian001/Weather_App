@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConvertPipe } from './pipes/convert.pipe';
 import { GraphicComponent } from './components/graphic/graphic.component';
 import { ChartsModule } from 'ng2-charts';
+import { DateAMPipe } from './pipes/date-am.pipe';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { ChartsModule } from 'ng2-charts';
     ScalePipe,
     ConvertPipe,
     GraphicComponent,
+    DateAMPipe,
   ],
   imports: [
     CommonModule,

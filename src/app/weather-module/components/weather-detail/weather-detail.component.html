@@ -17,21 +17,21 @@
 
     <div class="optional">
       <span class="sea-level">
-        Sea Levev: {{SelectedIndexDayWeather.main.sea_level | convert:'m-to-km' }}
+        Sea Levev:<span class="dinamic-info"> {{SelectedIndexDayWeather.main.sea_level | convert:'m-to-km' }}</span>
       </span>
       <hr>
-      <span class="pressure">Pressure: {{SelectedIndexDayWeather.main.pressure }}p</span>
+      <span class="pressure">Pressure: <span class="dinamic-info">{{SelectedIndexDayWeather.main.pressure }}</span>p</span>
       <hr>
 
       <span class="temp-max">
         T&nbsp; 
-        Max: {{SelectedIndexDayWeather.main.temp_max | scale:'celcius'}},&nbsp; 
-        Min: {{SelectedIndexDayWeather.main.temp_min| scale:'celcius'}} </span>
+        Max: <span class="dinamic-info">{{SelectedIndexDayWeather.main.temp_max | scale:'celcius'}}</span>,&nbsp; 
+        Min: <span class="dinamic-info">{{SelectedIndexDayWeather.main.temp_min| scale:'celcius'}}</span> </span>
       <hr>
       <span class="temp-min">
         H&nbsp; Hum: 
-        Max: {{SelectedDayWeather.dayMaxAndMinHum[currentDayNum].dayMax }}%,&nbsp;
-        Min: {{SelectedDayWeather.dayMaxAndMinHum[currentDayNum].dayMin }}% 
+        Max:  <span class="dinamic-info">{{SelectedDayWeather.dayMaxAndMinHum[currentDayNum].dayMax }}%</span>,&nbsp;
+        Min: <span class="dinamic-info">{{SelectedDayWeather.dayMaxAndMinHum[currentDayNum].dayMin }}%</span>
       </span>
 
       <hr>
@@ -45,7 +45,7 @@
 
           <mat-option *ngFor="let times of SelectedDayWeather.list; index as ind"
             [value]="SelectedDayWeather.list[selectedIndex]" (click)="select(ind)">
-            {{ (times.dt *1000) | date:"EEEE:h:mm" }}
+            {{ times.dt_txt | dateAM }}
           </mat-option>
 
         </mat-select>
