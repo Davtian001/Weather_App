@@ -11,9 +11,9 @@
                     [activeItem]="ind === activeItem" 
                     [weatherData]="weatherListItem" 
                     [city]="weatherData.city"
-                    [maxMinTemp]="weatherData.dayMaxAndMinTemp"
-                    [maxMinHum]="weatherData.dayMaxAndMinHum"
-                    >
+                    [maxMinTemp]="weatherData.dayMaxAndMinTemp[ind]"
+                    [maxMinHum]="weatherData.dayMaxAndMinHum[ind]"
+                    > 
                 </app-weather-box-item>
         </div>
     </div>

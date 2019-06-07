@@ -13,12 +13,12 @@
   </div>
 
   <mat-card-content>
-    <span class="humidity"> Humidity {{weatherDayItem[selectedIndex].main.humidity }}%</span>
+    <span class="humidity"> Humidity: {{maxMinHum.dayMin }} - {{maxMinHum.dayMax }} %</span>
     <hr>
-    <div class="tmp-interval">
-      <span class="temp-max"> {{maxAndMinTemps[selectedIndex].dayMax | scale:'celcius'}}</span>
+    <div class="tmp-interval"> 
+      <span class="temp-max"> {{maxAndMinTemps.dayMax | scale:'celcius'}}</span>
       <hr>
-      <span class="temp-min"> {{maxAndMinTemps[selectedIndex].dayMin | scale:'celcius'}}</span>
+      <span class="temp-min"> {{maxAndMinTemps.dayMin | scale:'celcius'}}</span>
     </div>
     <div class="col-vis">
       <span class="temp-clouds"> Clouds: {{weatherDayItem[selectedIndex].clouds.all }}%</span> <br>
