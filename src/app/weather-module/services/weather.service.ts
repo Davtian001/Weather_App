@@ -2,10 +2,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Observable, Subject, BehaviorSubject } from 'rxjs';
-// import { ObservableLike } from 'rxjs';
+
+
 const WEATHER_URL: string = 'http://api.openweathermap.org/data/2.5/forecast?q=';
 const API_KEY: string = 'c43bfb8f4335efe4e1714dd01126b645';
-
 
 
 @Injectable({

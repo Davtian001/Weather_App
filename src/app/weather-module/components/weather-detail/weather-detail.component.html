@@ -54,7 +54,7 @@
 
     <button mat-raised-button color="primary" class="back"
       [routerLink]="['../../', {selectedItem: false}]">Back</button>
-    <span class="hh">At- {{SelectedIndexDayWeather.dt * 1000 | date: 'hh'}}</span>
+    <span class="hh">At- {{SelectedIndexDayWeather.dt_txt }}</span>
   </div>
 
 </ng-template>
