@@ -1,4 +1,4 @@
-<mat-card class="weather-card"  [class.active-item]="activeItem">
+<mat-card *ngIf="weatherDayItem.length" class="weather-card"  [class.active-item]="activeItem" >
 
   <mat-card-header>
     <div mat-card-avatar class="tmp-city">

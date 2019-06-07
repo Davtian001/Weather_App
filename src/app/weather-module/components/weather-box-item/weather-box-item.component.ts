@@ -13,13 +13,14 @@ export class WeatherBoxItemComponent implements OnInit {
   weatherDayItem: object[];
   city: object;
   activeItem: any;
-  selectedIndex = 0;
+  selectedIndex = 3;
   maxAndMinTemps: object[];
   maxMinHum: object[];
-  
+
   constructor(private acRoute: ActivatedRoute) { }
 
   ngOnInit() {
+ 
     this.acRoute.paramMap.subscribe(params => this.activeItem = +params.get('selectedItem'));
   }
 

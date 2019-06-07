@@ -32,7 +32,6 @@ export class WeatherDetailComponent implements OnInit, OnDestroy {
     .subscribe(data => {
       this.selectedDayWeather = data.weatherList;
     });
-    // console.log(this.selectedDayWeather);
   }
 
   ngOnDestroy(){

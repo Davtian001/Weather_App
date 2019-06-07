@@ -112,15 +112,15 @@ export class WeatherService {
     weathetData.dayMaxAndMinTemp = [];
     weathetData.dayMaxAndMinHum = [];
 
-    weathetData.list.forEach((dayWeatherItem, ind, array) => {
+    weathetData.list.forEach((dayWeatherItem, ind) => {
       dayWeatherItemIndex = ind;
 
 
       dayWeatherItem.forEach(dataItem => {
         if (dataItem.main.temp > dayMaxTemp) { dayMaxTemp = dataItem.main.temp; }
-
+        
         if (dayMinTemp > dataItem.main.temp) { dayMinTemp = dataItem.main.temp; }
-
+        
         if (dataItem.main.humidity > dayMaxHumidity) { dayMaxHumidity = dataItem.main.humidity; }
         if (dayMinHumidity > dataItem.main.humidity) { dayMinHumidity = dataItem.main.humidity; }
       });
