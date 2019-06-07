@@ -1,8 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { WeatherService } from '../../weather.service';
-import { Router, ActivatedRoute } from '@angular/router';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { WeatherService } from '../../services/weather.service';
 
 @Component({
   selector: 'app-weather-main',

@@ -60,10 +60,11 @@
 </ng-template>
 
 
-
-<!-- Currrent Context -->
-<ng-container *ngTemplateOutlet="weatherDetails; context: {
-          _selectedIndexDayWeather: selectedDayWeather.list[selectedIndex],
-          _selectedDayWeather: selectedDayWeather
-        }">
+<div *ngIf="selectedDayWeather.list[selectedIndex]">
+  <!-- Currrent Context -->
+  <ng-container *ngTemplateOutlet="weatherDetails; context: {
+    _selectedIndexDayWeather: selectedDayWeather.list[selectedIndex],
+    _selectedDayWeather: selectedDayWeather
+  }">
 </ng-container>
+</div>

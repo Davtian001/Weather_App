@@ -13,8 +13,6 @@ export class GraphicService implements OnDestroy {
   constructor(private weatherService: WeatherService) { }
 
 
-
-
   getGraphic(scale: string, datAarrayName: string, arrayPropName: [string, string]): Promise<number[]> {
     return new Promise(resolve => {
 
@@ -39,7 +37,7 @@ export class GraphicService implements OnDestroy {
           }
         });
       resolve(graphicArray);
-    })
+    });
   }
 
 

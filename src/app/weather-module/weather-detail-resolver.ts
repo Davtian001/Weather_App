@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
 import { Observable, of, EMPTY, timer } from 'rxjs';
 import { take, switchMap, timeout } from 'rxjs/operators';
-import { WeatherService } from './weather.service';
+import { WeatherService } from './services/weather.service';
 
 
 @Injectable({

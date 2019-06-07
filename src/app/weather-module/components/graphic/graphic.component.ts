@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GraphicService } from '../../graphic.service';
+import { GraphicService } from '../../services/graphic.service';
 
 @Component({
   selector: 'app-graphic',
@@ -23,12 +23,12 @@ export class GraphicComponent implements OnInit {
   ngOnInit() {
 
     this.chartOptions = { responsive: true };
-    this.chartLabels = ['Thursday', 'Friday', 'Saturday', 'Sunday', 'Monday'];
+    this.chartLabels = ['Friday', 'Saturday', 'Sunday', 'Monday', 'Thursday'];
 
-    this.graphicService.getGraphic('celcius', 'dayMaxAndMinTemp', ['dayMax', 'dayMin']).then(graphic => 
+    this.graphicService.getGraphic('celcius', 'dayMaxAndMinTemp', ['dayMax', 'dayMin']).then(graphic =>
       this.chartData.push({ data: graphic, label: 'Temperature'}));
 
-    this.graphicService.getGraphic('humidity', 'dayMaxAndMinHum', ['dayMax', 'dayMin']).then(graphic => 
+    this.graphicService.getGraphic('humidity', 'dayMaxAndMinHum', ['dayMax', 'dayMin']).then(graphic =>
       this.chartData.push({ data: graphic, label: 'Humidity'}));
       }
 

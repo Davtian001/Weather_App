@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { WeatherService } from '../../weather.service';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { WeatherService } from '../../services/weather.service';
 
 @Component({
   selector: 'app-weather-detail',
@@ -23,7 +23,10 @@ export class WeatherDetailComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.acRoute.paramMap.pipe(takeUntil(this.destroySeream$))
-    .subscribe(dayNum => this.currentDayNum = +dayNum.get('day'))
+    .subscribe(dayNum => {
+      this.selectedIndex = 0;
+      this.currentDayNum = +dayNum.get('day');
+    });
 
     this.acRoute.data.pipe(takeUntil(this.destroySeream$))
     .subscribe(data => {

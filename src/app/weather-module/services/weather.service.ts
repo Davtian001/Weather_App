@@ -62,7 +62,7 @@ export class WeatherService {
         // console.log("TCL: weathetData", weathetData)
 
         let weatherDataPieces: object[][] = [];
-        let equalDate = new Date(weathetData.list[0].dt_txt).getDate();
+        let equalDate = new Date(weathetData.list[0].dt_txt).getDate()-2;
         let pushIndex = 0;
 
         weathetData.list.forEach((item,ind) => {
@@ -90,7 +90,7 @@ export class WeatherService {
 
         const midifedData = this.getMaxandMinTempDay(weathetData);
         this.weatherArray$.next(midifedData);
-        console.log("TCL: weathetData", weathetData,midifedData)
+        console.log(midifedData);
         return midifedData;
       })
     );
