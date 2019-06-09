@@ -7,7 +7,7 @@ export class DateAMPipe implements PipeTransform {
 
   transform(value: any, args?: any): any {
     const date = new Date(value)
-    return date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
+    return date.getHours() + ":" + date.getMinutes() + date.getSeconds()
   }
 
 }
